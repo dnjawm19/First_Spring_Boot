@@ -29,13 +29,6 @@ public class Memo extends Timestamped { // 생성,수정 시간을 자동으로 
     @JsonIgnore
     private String password;
 
-    public Memo(String title, String username, String contents, String password) {
-        this.title = title;
-        this.username = username;
-        this.contents = contents;
-        this.password = password;
-    }
-
     public Memo(MemoRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.username = requestDto.getUsername();
